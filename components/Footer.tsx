@@ -49,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-300 hover:text-accent transition">About Training</a></li>
               <li><a href="#testimonials" className="text-gray-300 hover:text-accent transition">Operator Stories</a></li>
-              <li><a href="#book-call" className="text-gray-300 hover:text-accent transition">Apply Now</a></li>
+              <li><a href="/v4" className="text-gray-300 hover:text-accent transition">Free Training</a></li>
               <li><a href="#social-proof" className="text-gray-300 hover:text-accent transition">Success Stats</a></li>
             </ul>
           </motion.div>

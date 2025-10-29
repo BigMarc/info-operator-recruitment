@@ -35,14 +35,14 @@ export default function Header() {
             <a href="#testimonials" className="text-gray-700 hover:text-black font-semibold transition">
               Operator Stories
             </a>
-            <a href="#book-call" className="text-gray-700 hover:text-black font-semibold transition">
-              Apply Now
+            <a href="/v4" className="text-gray-700 hover:text-black font-semibold transition">
+              Free Training
             </a>
             <a
-              href="#book-call"
+              href="/v4"
               className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg hover:shadow-xl"
             >
-              Get Started
+              Free Training
             </a>
           </motion.nav>
 
@@ -88,18 +88,18 @@ export default function Header() {
                 Operator Stories
               </a>
               <a 
-                href="#book-call" 
+                href="/v4" 
                 className="text-gray-700 hover:text-black font-semibold transition"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Apply Now
+                Free Training
               </a>
               <a
-                href="#book-call"
+                href="/v4"
                 className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Get Started
+                Free Training
               </a>
             </div>
           </motion.div>

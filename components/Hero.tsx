@@ -79,20 +79,20 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <a
-              href="#book-call"
+              href="/v4"
               className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden glow-animation"
             >
               <span className="relative z-10 flex items-center gap-3">
-                Apply for Training Program
+                Free Training
                 <span className="group-hover:translate-x-2 transition-transform">→</span>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-accent via-accent-dark to-accent opacity-0 group-hover:opacity-100 transition-opacity"></div>
             </a>
             <a
-              href="#video"
+              href="/v4"
               className="group px-8 py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-lg rounded-2xl transition-all transform hover:scale-105 flex items-center gap-2"
             >
-              Learn About the Opportunity
+              Free Training
               <span className="group-hover:translate-y-1 transition-transform">↓</span>
             </a>
           </motion.div>
