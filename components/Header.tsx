@@ -18,7 +18,7 @@ export default function Header() {
             className="flex items-center"
           >
             <a href="/" className="text-2xl font-black text-black">
-              Info<span className="text-accent">Operator</span>
+              Build<span className="text-accent">ForThem</span>
             </a>
           </motion.div>
 

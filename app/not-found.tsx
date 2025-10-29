@@ -27,10 +27,10 @@ export default function NotFound() {
         </div>
 
         <div className="bg-accent/10 rounded-2xl p-8 border-2 border-accent/20 mb-8">
-          <h3 className="text-2xl font-bold text-black mb-4">Looking for Info Operator?</h3>
+          <h3 className="text-2xl font-bold text-black mb-4">Looking for Growth Partner Training?</h3>
           <p className="text-gray-700 mb-6">
-            Our Info Operator partnership program helps content creators launch successful info products 
-            with no upfront costs. We handle the backend while you provide the reach.
+            Our Growth Partner training program helps you build a successful practice helping content creators launch info products 
+            with comprehensive training and client matching.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

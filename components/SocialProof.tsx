@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 
 export default function SocialProof() {
   const stats = [
-    { number: '50+', label: 'Trained Operators', sublabel: 'Active Graduates' },
-    { number: '$1.2M+', label: 'Earned by Operators', sublabel: 'Revenue Share' },
+    { number: '50+', label: 'Trained Partners', sublabel: 'Active Graduates' },
+    { number: '$1.2M+', label: 'Earned by Partners', sublabel: 'Revenue Share' },
     { number: '90%', label: 'Success Rate', sublabel: 'Get Matched with Clients' },
     { number: '$12K', label: 'Average Earnings', sublabel: 'Per Client' },
   ];
@@ -33,12 +33,12 @@ export default function SocialProof() {
           <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
             Join{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
-              50+ Successful Operators
+              50+ Successful Partners
             </span>
           </h2>
           <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
-            From marketing managers to freelancers, we've trained operators across all backgrounds 
-            to build successful Info Operator practices and earn $5K-$20K+ per client.
+            From marketing managers to freelancers, we've trained partners across all backgrounds 
+            to build successful Growth Partner practices and earn $5K-$20K+ per client.
           </p>
         </motion.div>
 
@@ -125,7 +125,7 @@ export default function SocialProof() {
                   <span className="text-black text-2xl">🎓</span>
                 </div>
                 <h4 className="text-lg font-bold text-black mb-2">Comprehensive Training</h4>
-                <p className="text-gray-700">Complete system covering all aspects of Info Operator services</p>
+                <p className="text-gray-700">Complete system covering all aspects of Growth Partner services</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">

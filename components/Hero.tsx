@@ -21,22 +21,22 @@ export default function Hero() {
         >
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight tracking-tight">
-            How to Become an Info Operator & Earn{' '}
+            How Content Creators Make{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent inline-block">
-              $5K-$20K+
+              $10K-$50K+
             </span>
             <br />
-            <span className="text-black">Per Influencer Client</span>
+            <span className="text-black">Per Product Launch</span>
           </h1>
 
           {/* Subheadline with Offer */}
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-lg sm:text-xl md:text-2xl text-black mb-6 font-bold leading-relaxed">
-              Learn the Backend, Marketing & Automation Skills to Help Influencers Launch Info Products
+              How to make $10–20k per month consistently as a "Creator Partner" with just one client.
             </p>
             <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
-              Master the proven system that generates $10K-$50K+ per launch. Get trained, get matched with influencers, 
-              and earn 20-50% revenue share. High-margin service business with unlimited earning potential.
+              Discover the 4-step framework:<br />
+              I'll show you how I generated over €100,000 profit in a single month and how you can replicate it step by step.
             </p>
             
             {/* Guarantee */}
@@ -65,7 +65,7 @@ export default function Hero() {
                     </svg>
                   </div>
                   <p className="text-black font-bold text-lg">Watch The Training Overview</p>
-                  <p className="text-gray-600 text-sm">See how our Info Operators earn $5K-$20K+ per client</p>
+                  <p className="text-gray-600 text-sm">See how our Growth Partners earn $5K-$20K+ per client</p>
                 </div>
               </div>
             </div>
@@ -106,7 +106,7 @@ export default function Hero() {
               className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border-2 border-accent/10 shadow-lg hover:shadow-xl transition-all"
             >
               <div className="text-5xl font-black text-black mb-2">50+</div>
-              <div className="text-black font-semibold">Trained Operators</div>
+              <div className="text-black font-semibold">Trained Partners</div>
               <div className="mt-2 text-xs text-gray-500 uppercase tracking-wider">Active in Program</div>
             </motion.div>
             <motion.div 
@@ -116,7 +116,7 @@ export default function Hero() {
               className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 border-2 border-accent/10 shadow-lg hover:shadow-xl transition-all"
             >
               <div className="text-5xl font-black text-accent mb-2">$1.2M+</div>
-              <div className="text-black font-semibold">Earned by Operators</div>
+              <div className="text-black font-semibold">Earned by Partners</div>
               <div className="mt-2 text-xs text-gray-500 uppercase tracking-wider">Revenue Share</div>
             </motion.div>
             <motion.div 

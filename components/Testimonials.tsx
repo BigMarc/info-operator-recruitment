@@ -12,14 +12,14 @@ export default function Testimonials() {
       quote: 'I was skeptical about leaving my corporate job, but Marc\'s training program gave me everything I needed. I now have 8 influencer clients and earn $45K annually. The client matching system is incredible.',
       result: '$45K Annual Earnings',
       before: 'Corporate marketing',
-      after: 'Info Operator business'
+      after: 'Growth Partner business'
     },
     {
       name: 'Marcus Rodriguez',
       background: 'Freelancer',
       clients: '12',
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-      quote: 'Working with Marc transformed my freelance business. I went from inconsistent $3K months to earning $68K annually as an Info Operator. The training and client matching made all the difference.',
+      quote: 'Working with Marc transformed my freelance business. I went from inconsistent $3K months to earning $68K annually as a Growth Partner. The training and client matching made all the difference.',
       result: '$68K Annual Earnings',
       before: '$3K/month freelance',
       after: '$68K annual operator'
@@ -105,7 +105,7 @@ export default function Testimonials() {
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Real results from real people who've transformed their careers 
-            through our Info Operator training and client matching program.
+            through our Growth Partner training and client matching program.
           </p>
         </motion.div>
 

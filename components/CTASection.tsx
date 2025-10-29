@@ -15,14 +15,14 @@ export default function CTASection() {
         >
           {/* Main CTA */}
           <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
-            Ready To Become an{' '}
+            Ready To Become a{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
-              Info Operator?
+              Growth Partner?
             </span>
           </h2>
           
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            Join 50+ operators who've built successful practices. 
+            Join 50+ partners who've built successful practices. 
             Apply for our training program and get matched with influencer clients.
           </p>
 
@@ -85,7 +85,7 @@ export default function CTASection() {
 
             <p className="text-gray-700 text-center mb-6">
               We limit training cohorts to ensure personalized attention and quality client matching. 
-              Don't miss your chance to start your Info Operator career this month.
+              Don't miss your chance to start your Growth Partner career this month.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -16,10 +16,10 @@ export default function Footer() {
             className="md:col-span-2"
           >
             <h3 className="text-2xl font-black text-white mb-4">
-              Info<span className="text-accent">Operator</span>
+              Build<span className="text-accent">ForThem</span>
             </h3>
             <p className="text-gray-300 mb-6 max-w-md">
-              Training aspiring Info Operators to help content creators launch successful info products. 
+              Training aspiring Growth Partners to help content creators launch successful info products. 
               Comprehensive training, client matching, and ongoing support.
             </p>
             <div className="flex space-x-4">
@@ -112,7 +112,7 @@ export default function Footer() {
         >
           <p className="text-gray-400">
             © 2024 TGN Media LLC. All rights reserved. | 
-            <span className="text-accent font-semibold"> Info Operator Training Program</span>
+            <span className="text-accent font-semibold"> Growth Partner Training Program</span>
           </p>
         </motion.div>
       </div>

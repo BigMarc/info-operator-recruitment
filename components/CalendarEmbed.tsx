@@ -14,14 +14,14 @@ export default function CalendarEmbed() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
-            Ready To Become an{' '}
+            Ready To Become a{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
-              Info Operator?
+              Growth Partner?
             </span>
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
             Book a free 30-minute strategy call where we'll discuss the training program, 
-            client matching process, and earning potential for Info Operators.
+            client matching process, and earning potential for Growth Partners.
           </p>
         </motion.div>
 
@@ -35,29 +35,22 @@ export default function CalendarEmbed() {
             className="order-2 lg:order-1"
           >
             <div className="bg-white rounded-2xl shadow-2xl p-8 border-2 border-accent/10">
-              <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-black font-bold text-lg">Google Calendar</p>
-                  <p className="text-gray-600 text-sm">Replace with your calendar embed URL</p>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-black mb-4">Book Your Strategy Call</h3>
-                <p className="text-gray-600 mb-6">
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-black mb-4 text-center">Book Your Strategy Call</h3>
+                <p className="text-gray-600 mb-6 text-center">
                   Choose a time that works for you. We'll discuss the training program, 
                   client matching process, and how you can earn $5K-$20K+ per client.
                 </p>
-                <a
-                  href="#"
-                  className="inline-block bg-accent text-black px-8 py-4 rounded-full font-bold hover:bg-accent-dark transition shadow-lg hover:shadow-xl"
-                >
-                  Select Time Slot →
-                </a>
+              </div>
+              <div className="rounded-xl overflow-hidden">
+                <iframe 
+                  src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0PhisTFQ39uvL2tQkbo4U0xBOm5z5zUWQXHM6acjIAvomo6fxmFR7XjurJutBp3k0xSigSuQr3?gv=true" 
+                  style={{border: 0}} 
+                  width="100%" 
+                  height="600" 
+                  frameBorder="0"
+                  title="Google Calendar Appointment Scheduling"
+                ></iframe>
               </div>
             </div>
           </motion.div>
@@ -80,7 +73,7 @@ export default function CalendarEmbed() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-black mb-2">Training Program Overview</h4>
-                  <p className="text-gray-700">Learn about our comprehensive Info Operator training covering offer creation, funnels, and automation.</p>
+                  <p className="text-gray-700">Learn about our comprehensive Growth Partner training covering offer creation, funnels, and automation.</p>
                 </div>
               </div>
               
@@ -90,7 +83,7 @@ export default function CalendarEmbed() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-black mb-2">Client Matching Process</h4>
-                  <p className="text-gray-700">Understand how we connect trained operators with vetted influencers who need Info Operator services.</p>
+                  <p className="text-gray-700">Understand how we connect trained partners with vetted influencers who need Growth Partner services.</p>
                 </div>
               </div>
               
@@ -110,7 +103,7 @@ export default function CalendarEmbed() {
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-black mb-2">Next Steps</h4>
-                  <p className="text-gray-700">Get clarity on the application process, training timeline, and how to get started as an Info Operator.</p>
+                  <p className="text-gray-700">Get clarity on the application process, training timeline, and how to get started as a Growth Partner.</p>
                 </div>
               </div>
             </div>

@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Info Operator - Turn Creator Audiences Into Revenue',
-  description: 'Partner with creators to launch info products. Handle backend, marketing & automation while creators provide reach. Split profits 20-50%. No upfront costs.',
-  keywords: 'info operator, creator monetization, info products, course creation, community building, creator partnerships',
+  title: 'Growth Partner - Turn Creator Audiences Into Revenue',
+  description: 'Become a Growth Partner and help creators launch info products. Comprehensive training, client matching, and ongoing support. Earn $5K-$20K+ per client.',
+  keywords: 'growth partner, creator monetization, info products, course creation, community building, creator partnerships',
   authors: [{ name: 'Marc Schultheiss' }],
   openGraph: {
-    title: 'Info Operator - Turn Creator Audiences Into Revenue',
-    description: 'Partner with creators to launch info products. Handle backend, marketing & automation while creators provide reach. Split profits 20-50%.',
+    title: 'Growth Partner - Turn Creator Audiences Into Revenue',
+    description: 'Become a Growth Partner and help creators launch info products. Comprehensive training, client matching, and ongoing support.',
     type: 'website',
   },
 };

@@ -17,13 +17,13 @@ export default function About() {
               {/* Founder photo */}
               <div className="aspect-square bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl shadow-2xl overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=800&fit=crop" 
-                  alt="Marc Schultheiss - Info Operator Expert" 
+                  src="/marc-schultheiss.jpg" 
+                  alt="Marc Schultheiss - Growth Partner Expert" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-accent text-black px-6 py-3 rounded-full shadow-lg font-bold">
-                Info Operator Expert
+                Growth Partner Expert
               </div>
             </div>
           </motion.div>
@@ -38,21 +38,21 @@ export default function About() {
               Hi, I'm Marc Schultheiss
             </h2>
             <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-              I've spent the last 8 years training Info Operators to help content creators break free from the 
+              I've spent the last 8 years training Growth Partners to help content creators break free from the 
               sponsor-dependent revenue model and build sustainable, high-margin info product businesses.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Through our proven Info Operator training program, I've trained 50+ operators who now help creators launch paid communities, 
+              Through our proven Growth Partner training program, I've trained 50+ partners who now help creators launch paid communities, 
               digital courses, and high-ticket services that consistently generate $10K-$50K+ per launch.
             </p>
             <div className="space-y-3 mb-8">
               <div className="flex items-start gap-3">
                 <span className="text-accent text-xl font-bold">✓</span>
-                <p className="text-gray-700">Trained 50+ successful Info Operators earning $5K-$20K+ per client</p>
+                <p className="text-gray-700">Trained 50+ successful Growth Partners earning $5K-$20K+ per client</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent text-xl font-bold">✓</span>
-                <p className="text-gray-700">90% operator success rate - graduates get matched with clients</p>
+                <p className="text-gray-700">90% partner success rate - graduates get matched with clients</p>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-accent text-xl font-bold">✓</span>
@@ -87,17 +87,17 @@ export default function About() {
           </div>
           <div className="bg-white rounded-xl p-6 text-center border-2 border-accent/10 shadow-lg">
               <div className="text-3xl font-black text-accent mb-2">50+</div>
-              <div className="text-gray-700 font-semibold">Trained Operators</div>
+              <div className="text-gray-700 font-semibold">Trained Partners</div>
               <div className="mt-2 text-xs text-gray-500 uppercase tracking-wider">Active Graduates</div>
           </div>
           <div className="bg-white rounded-xl p-6 text-center border-2 border-accent/10 shadow-lg">
             <div className="text-3xl font-black text-black mb-2">$1.2M+</div>
-            <div className="text-gray-700 font-semibold">Earned by Operators</div>
+            <div className="text-gray-700 font-semibold">Earned by Partners</div>
             <div className="mt-2 text-xs text-gray-500 uppercase tracking-wider">Revenue Share</div>
           </div>
         </motion.div>
 
-        {/* Info Operator Process */}
+        {/* Growth Partner Process */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -106,7 +106,7 @@ export default function About() {
           className="mt-16"
         >
           <h3 className="text-3xl font-black text-black text-center mb-12">
-            How to Become a Successful Info Operator
+            How to Become a Successful Growth Partner
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white rounded-xl p-6 text-center border-2 border-accent/10 shadow-lg">
@@ -128,7 +128,7 @@ export default function About() {
                 <span className="text-black font-bold text-lg">3</span>
               </div>
               <h4 className="text-lg font-bold text-black mb-2">Get Matched with Influencers</h4>
-              <p className="text-gray-600 text-sm">We connect you with vetted influencers who need Info Operator services</p>
+              <p className="text-gray-600 text-sm">We connect you with vetted influencers who need Growth Partner services</p>
             </div>
             <div className="bg-white rounded-xl p-6 text-center border-2 border-accent/10 shadow-lg">
               <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
