@@ -79,6 +79,36 @@ Same for English. Edit `dictionaries/de.ts` and `dictionaries/en.ts` (the `legal
 
 ---
 
+## Step 8: Set `LEAD_WEBHOOK_URL` env var (optional but recommended)
+
+The lead-capture modal POSTs to `/api/lead`. The route ALWAYS logs to Vercel runtime logs (visible in dashboard → Logs). It optionally forwards to a webhook URL set via `LEAD_WEBHOOK_URL`.
+
+1. Vercel dashboard → Project Settings → Environment Variables
+2. Add `LEAD_WEBHOOK_URL` = your incoming webhook (Zapier, Make, n8n, ConvertKit, ActiveCampaign, etc.)
+3. Set scope: **Production**, **Preview**, **Development** (all three)
+4. Redeploy (next push auto-deploys; or trigger manually)
+
+If unset, leads are still captured in Vercel logs — no data loss, but you'll need to parse logs to retrieve them.
+
+**Payload sent to webhook:**
+```json
+{
+  "firstName": "Marc",
+  "email": "marc@example.com",
+  "consent": true,
+  "locale": "de",
+  "source": "hero",
+  "userAgent": "...",
+  "referrer": "...",
+  "capturedAt": "2026-05-27T13:45:00.000Z",
+  "ip": "203.0.113.1"
+}
+```
+
+The `source` field tells you which CTA placement converted (`hero`, `header`, `header-mobile`, `trainer`, `ladder-step1`, `ladder-primary`).
+
+---
+
 ## Troubleshooting
 
 **"Both domains show the same language."** Middleware isn't reading the right `host` header. Check Vercel function logs for the request; if `host` is `vercel.app` (preview) it falls back to default (`de`). Production domains should be detected correctly.
