@@ -2,16 +2,18 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import type { NavDict, Locale } from '@/dictionaries/types';
+import type { NavDict, Locale, ModalDict } from '@/dictionaries/types';
 import { otherLocale, PRODUCTION_DOMAINS } from '@/i18n/config';
 import { localized } from '@/utils/route';
+import TrainingCTA from './TrainingCTA';
 
 interface HeaderProps {
   dict: NavDict;
+  modalDict: ModalDict;
   locale: Locale;
 }
 
-export default function Header({ dict, locale }: HeaderProps) {
+export default function Header({ dict, modalDict, locale }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const switchTarget = otherLocale(locale);
   const switchHref = PRODUCTION_DOMAINS[switchTarget];
@@ -47,12 +49,14 @@ export default function Header({ dict, locale }: HeaderProps) {
             >
               {dict.switchTo}
             </a>
-            <a
-              href={localized('/v4', locale)}
+            <TrainingCTA
+              locale={locale}
+              dict={modalDict}
+              source="header"
               className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg hover:shadow-xl"
             >
               {dict.cta}
-            </a>
+            </TrainingCTA>
           </motion.nav>
 
           <motion.button
@@ -87,13 +91,14 @@ export default function Header({ dict, locale }: HeaderProps) {
               <a href={switchHref} hrefLang={switchTarget} className="text-xs font-bold uppercase tracking-wider text-gray-500 hover:text-accent border border-gray-300 rounded-full px-3 py-1.5 transition w-fit">
                 {dict.switchTo}
               </a>
-              <a
-                href={localized('/v4', locale)}
-                onClick={() => setIsMenuOpen(false)}
+              <TrainingCTA
+                locale={locale}
+                dict={modalDict}
+                source="header-mobile"
                 className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg text-center"
               >
                 {dict.cta}
-              </a>
+              </TrainingCTA>
             </div>
           </motion.div>
         )}

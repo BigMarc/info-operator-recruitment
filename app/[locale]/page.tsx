@@ -26,14 +26,14 @@ export default function Home({ params }: { params: { locale: string } }) {
 
   return (
     <main className="min-h-screen">
-      <Header dict={dict.nav} locale={locale} />
-      <Hero dict={dict.hero} locale={locale} />
+      <Header dict={dict.nav} modalDict={dict.modal} locale={locale} />
+      <Hero dict={dict.hero} modalDict={dict.modal} locale={locale} />
       <ProblemAgitation dict={dict.problem} />
       <Reframe dict={dict.reframe} />
       <Method dict={dict.method} />
-      <Trainer dict={dict.trainer} locale={locale} />
+      <Trainer dict={dict.trainer} modalDict={dict.modal} locale={locale} />
       <Testimonials dict={dict.testimonials} />
-      <ValueLadder dict={dict.ladder} locale={locale} />
+      <ValueLadder dict={dict.ladder} modalDict={dict.modal} locale={locale} />
       <GuaranteeScarcity dict={dict.guarantee} />
       <FAQ dict={dict.faq} />
       <CalendarEmbed dict={dict.calendar} />

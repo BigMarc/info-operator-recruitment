@@ -1,16 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { TrainerDict, Locale } from '@/dictionaries/types';
-import { localized } from '@/utils/route';
+import type { TrainerDict, Locale, ModalDict } from '@/dictionaries/types';
 import FormattedText from './FormattedText';
+import TrainingCTA from './TrainingCTA';
 
 interface TrainerProps {
   dict: TrainerDict;
+  modalDict: ModalDict;
   locale: Locale;
 }
 
-export default function Trainer({ dict, locale }: TrainerProps) {
+export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,13 +76,15 @@ export default function Trainer({ dict, locale }: TrainerProps) {
         </motion.div>
 
         <div className="text-center">
-          <a
-            href={localized('/v4', locale)}
+          <TrainingCTA
+            locale={locale}
+            dict={modalDict}
+            source="trainer"
             className="inline-flex items-center gap-3 bg-accent text-black px-10 py-5 rounded-2xl font-black text-lg shadow-lg hover:shadow-xl hover:bg-accent-dark transition-all transform hover:scale-105"
           >
             {dict.cta}
             <span>→</span>
-          </a>
+          </TrainingCTA>
         </div>
       </div>
     </section>

@@ -1,15 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { HeroDict, Locale } from '@/dictionaries/types';
-import { localized } from '@/utils/route';
+import type { HeroDict, Locale, ModalDict } from '@/dictionaries/types';
+import TrainingCTA from './TrainingCTA';
 
 interface HeroProps {
   dict: HeroDict;
+  modalDict: ModalDict;
   locale: Locale;
 }
 
-export default function Hero({ dict, locale }: HeroProps) {
+export default function Hero({ dict, modalDict, locale }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-white pt-16 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -84,15 +85,17 @@ export default function Hero({ dict, locale }: HeroProps) {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <a
-              href={localized('/v4', locale)}
+            <TrainingCTA
+              locale={locale}
+              dict={modalDict}
+              source="hero"
               className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden glow-animation"
             >
               <span className="relative z-10 flex items-center gap-3">
                 {dict.ctaPrimary}
                 <span className="group-hover:translate-x-2 transition-transform">→</span>
               </span>
-            </a>
+            </TrainingCTA>
             <a
               href="#methode"
               className="group px-8 py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-lg rounded-2xl transition-all transform hover:scale-105 flex items-center gap-2"

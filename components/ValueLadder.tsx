@@ -1,17 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import type { LadderDict, Locale } from '@/dictionaries/types';
+import type { LadderDict, Locale, ModalDict } from '@/dictionaries/types';
 import { localized } from '@/utils/route';
+import TrainingCTA from './TrainingCTA';
 
 interface ValueLadderProps {
   dict: LadderDict;
+  modalDict: ModalDict;
   locale: Locale;
 }
 
 const OFFSETS = ['lg:translate-y-12', 'lg:translate-y-6', 'lg:translate-y-0'];
 
-export default function ValueLadder({ dict, locale }: ValueLadderProps) {
+export default function ValueLadder({ dict, modalDict, locale }: ValueLadderProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,24 +55,37 @@ export default function ValueLadder({ dict, locale }: ValueLadderProps) {
               </div>
               <h3 className="text-xl font-bold text-black mb-3 leading-snug">{step.title}</h3>
               <p className="text-gray-700 leading-relaxed mb-6 flex-grow">{step.body}</p>
-              <a
-                href={localized(step.href, locale)}
-                className="inline-flex items-center justify-center gap-2 bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg"
-              >
-                {step.cta} →
-              </a>
+              {step.href === '/v4' ? (
+                <TrainingCTA
+                  locale={locale}
+                  dict={modalDict}
+                  source={`ladder-step${step.num}`}
+                  className="inline-flex items-center justify-center gap-2 bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg"
+                >
+                  {step.cta} →
+                </TrainingCTA>
+              ) : (
+                <a
+                  href={localized(step.href, locale)}
+                  className="inline-flex items-center justify-center gap-2 bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg"
+                >
+                  {step.cta} →
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
 
         <div className="text-center">
-          <a
-            href={localized('/v4', locale)}
+          <TrainingCTA
+            locale={locale}
+            dict={modalDict}
+            source="ladder-primary"
             className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-2xl font-black text-lg shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all transform hover:scale-105"
           >
             {dict.ctaPrimary}
             <span>→</span>
-          </a>
+          </TrainingCTA>
         </div>
       </div>
     </section>

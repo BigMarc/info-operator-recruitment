@@ -6,7 +6,7 @@ export default function AGBPage() {
   const dict = getDictionary('de');
   return (
     <main className="min-h-screen bg-white">
-      <Header dict={dict.nav} locale="de" />
+      <Header dict={dict.nav} modalDict={dict.modal} locale="de" />
       <div className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
