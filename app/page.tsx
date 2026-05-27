@@ -21,8 +21,8 @@ export default function Home() {
       <Hero dict={dict.hero} locale={locale} />
       <ProblemAgitation dict={dict.problem} />
       <Reframe dict={dict.reframe} />
-      <Method />
-      <Trainer />
+      <Method dict={dict.method} />
+      <Trainer dict={dict.trainer} locale={locale} />
       <Testimonials />
       <ValueLadder />
       <GuaranteeScarcity />

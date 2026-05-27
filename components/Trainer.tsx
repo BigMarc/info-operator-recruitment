@@ -1,26 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { TrainerDict, Locale } from '@/dictionaries/types';
+import { localized } from '@/utils/route';
+import FormattedText from './FormattedText';
 
-const CREDENTIALS = [
-  {
-    icon: '📈',
-    title: 'Track Record',
-    body: '8 Jahre Aufbau von Creator-Backend-Systemen',
-  },
-  {
-    icon: '🏆',
-    title: 'Ausbildungsergebnisse',
-    body: '50+ aktive Absolventen mit eigenen Creator-Kunden',
-  },
-  {
-    icon: '💰',
-    title: 'Bewiesener Umsatz',
-    body: '1,2 Mio. €+ an Growth Partners ausgezahlt',
-  },
-];
+interface TrainerProps {
+  dict: TrainerDict;
+  locale: Locale;
+}
 
-export default function Trainer() {
+export default function Trainer({ dict, locale }: TrainerProps) {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,14 +22,12 @@ export default function Trainer() {
           className="text-center mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
-            Dein Ausbilder für{' '}
+            {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
-              Growth-Partner-Business
+              {dict.headlineAccent}
             </span>
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Gründer von BuildForThem, Growth-Partner-Trainer, Experte für Creator-Backend-Strategie.
-          </p>
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">{dict.sub}</p>
         </motion.div>
 
         <motion.div
@@ -51,14 +39,12 @@ export default function Trainer() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
             <div className="p-8 md:p-12">
-              <h3 className="text-4xl font-black text-accent mb-6">Marc Schultheiss</h3>
+              <h3 className="text-4xl font-black text-accent mb-6">{dict.name}</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                Marc hat in den letzten 8 Jahren über 50 Growth Partners ausgebildet,
-                die heute mit etablierten Content Creators arbeiten. Sein BuildForThem-System
-                hat über <strong className="text-black">1,2 Mio. € Revenue-Share</strong> für seine Partner generiert.
+                <FormattedText text={dict.intro} strongClassName="text-black font-bold" />
               </p>
               <div className="space-y-5">
-                {CREDENTIALS.map((c) => (
+                {dict.credentials.map((c) => (
                   <div key={c.title} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center flex-shrink-0">
                       <span className="text-xl">{c.icon}</span>
@@ -74,15 +60,15 @@ export default function Trainer() {
             <div className="relative bg-black min-h-[400px] lg:min-h-full">
               <img
                 src="/marc-schultheiss.jpg"
-                alt="Marc Schultheiss"
+                alt={dict.name}
                 className="w-full h-full object-cover grayscale"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <p className="text-white text-lg italic leading-relaxed mb-3 border-l-4 border-accent pl-4">
-                  &ldquo;Mein Ziel: Menschen vom Gehalts-Spiel ins Beteiligungs-Spiel bringen.&rdquo;
+                  &ldquo;{dict.quote}&rdquo;
                 </p>
-                <p className="text-accent font-bold text-xl pl-4">— Marc Schultheiss</p>
+                <p className="text-accent font-bold text-xl pl-4">{dict.quoteAttribution}</p>
               </div>
             </div>
           </div>
@@ -90,10 +76,10 @@ export default function Trainer() {
 
         <div className="text-center">
           <a
-            href="/v4"
+            href={localized('/v4', locale)}
             className="inline-flex items-center gap-3 bg-accent text-black px-10 py-5 rounded-2xl font-black text-lg shadow-lg hover:shadow-xl hover:bg-accent-dark transition-all transform hover:scale-105"
           >
-            Kostenloses Training sichern
+            {dict.cta}
             <span>→</span>
           </a>
         </div>
