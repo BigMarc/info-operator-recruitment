@@ -1,26 +1,46 @@
+import { headers } from 'next/headers';
+import { isValidLocale, defaultLocale } from '@/i18n/config';
+import type { Locale } from '@/dictionaries/types';
+import { getDictionary } from '@/dictionaries';
 import type { Metadata } from 'next';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'Growth Partner Ausbildung — BuildForThem',
-  description: 'Werde Growth Partner und verdiene 5.000–20.000 € pro Creator-Kunde. Komplette Ausbildung, Creator-Matching, 5K-Garantie in 90 Tagen.',
-  keywords: 'growth partner, creator backend, info produkt, online business, revenue share, ortsunabhängig, ausbildung',
-  authors: [{ name: 'Marc Schultheiss' }],
-  openGraph: {
-    title: 'Growth Partner Ausbildung — BuildForThem',
-    description: 'Werde Growth Partner und verdiene 5.000–20.000 € pro Creator-Kunde. Komplette Ausbildung, Creator-Matching, 5K-Garantie in 90 Tagen.',
-    type: 'website',
-    locale: 'de_DE',
-  },
-};
+function readLocale(): Locale {
+  const headersList = headers();
+  const candidate = headersList.get('x-locale') || '';
+  return isValidLocale(candidate) ? candidate : defaultLocale;
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = readLocale();
+  const dict = getDictionary(locale);
+  return {
+    title: dict.meta.title,
+    description: dict.meta.description,
+    openGraph: {
+      title: dict.meta.title,
+      description: dict.meta.description,
+      type: 'website',
+      locale: locale === 'de' ? 'de_DE' : 'en_US',
+    },
+    alternates: {
+      languages: {
+        de: 'https://buildforthem.de',
+        en: 'https://buildforthem.com',
+        'x-default': 'https://buildforthem.de',
+      },
+    },
+  };
+}
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const locale = readLocale();
   return (
-    <html lang="de">
+    <html lang={locale}>
       <body className="antialiased">{children}</body>
     </html>
   );
