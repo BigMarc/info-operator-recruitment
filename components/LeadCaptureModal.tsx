@@ -125,7 +125,7 @@ export default function LeadCaptureModal({
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="relative w-full max-w-[480px] bg-white rounded-2xl shadow-2xl border-2 border-accent/20 p-8 pointer-events-auto"
+                className="relative w-full max-w-[480px] max-h-[90vh] overflow-y-auto bg-white rounded-2xl shadow-2xl border-2 border-accent/20 p-6 sm:p-8 pointer-events-auto"
               >
                 <Dialog.Close
                   className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-700 transition focus:outline-none focus:ring-2 focus:ring-accent"
@@ -134,7 +134,7 @@ export default function LeadCaptureModal({
                   ×
                 </Dialog.Close>
 
-                <Dialog.Title className="text-2xl font-black text-black mb-3 pr-8">
+                <Dialog.Title className="text-xl sm:text-2xl font-black text-black mb-3 pr-8">
                   {dict.headline}
                 </Dialog.Title>
                 <Dialog.Description className="text-gray-700 mb-6">

@@ -10,7 +10,7 @@ export default function FAQ({ dict }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white">
+    <section id="faq" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default function FAQ({ dict }: FAQProps) {
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
             {dict.tag}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6">
             {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
               {dict.headlineAccent}
@@ -46,9 +46,9 @@ export default function FAQ({ dict }: FAQProps) {
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
                   aria-expanded={isOpen}
-                  className="w-full flex items-center justify-between gap-4 p-6 text-left hover:bg-accent/5 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
+                  className="w-full flex items-center justify-between gap-4 p-5 md:p-6 text-left hover:bg-accent/5 transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                 >
-                  <span className="text-lg md:text-xl font-bold text-black">{item.q}</span>
+                  <span className="text-base sm:text-lg md:text-xl font-bold text-black">{item.q}</span>
                   <span
                     className={`flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/30 text-accent flex items-center justify-center text-xl font-bold transition-transform ${
                       isOpen ? 'rotate-45' : ''
@@ -67,7 +67,7 @@ export default function FAQ({ dict }: FAQProps) {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 text-gray-700 leading-relaxed">{item.a}</div>
+                      <div className="px-5 md:px-6 pb-5 md:pb-6 text-gray-700 leading-relaxed">{item.a}</div>
                     </motion.div>
                   )}
                 </AnimatePresence>

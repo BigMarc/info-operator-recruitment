@@ -33,15 +33,15 @@ export default function V4Page() {
         </div>
       </header>
 
-      <section className="py-20 bg-gradient-to-br from-white via-gray-50 to-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-3 rounded-full border-2 border-accent/20 mb-8">
-              <span className="text-accent font-bold text-lg">🎥</span>
-              <span className="text-black font-bold text-lg">{dict.badge}</span>
+            <div className="inline-flex items-center gap-2 bg-accent/10 px-4 py-2 sm:px-6 sm:py-3 rounded-full border-2 border-accent/20 mb-6 sm:mb-8">
+              <span className="text-accent font-bold text-base sm:text-lg">🎥</span>
+              <span className="text-black font-bold text-sm sm:text-lg">{dict.badge}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-black mb-8 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 sm:mb-8 leading-tight">
               {dict.headlineBefore}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
                 {dict.headlineAccent}
@@ -49,7 +49,7 @@ export default function V4Page() {
               {dict.headlineAfter}
             </h1>
 
-            <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
               {dict.sub1}{' '}
               <span className="text-accent font-black text-2xl">{dict.highlightAmount}</span>{' '}
               {dict.sub2}{' '}
@@ -60,9 +60,9 @@ export default function V4Page() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <button
                 onClick={() => setIsVideoUnlocked(true)}
-                className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden"
+                className="group relative bg-accent text-black w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-2xl font-black text-base sm:text-lg md:text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden"
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="relative z-10 flex items-center justify-center gap-3">
                   {dict.ctaPrimary}
                   <span className="group-hover:translate-x-2 transition-transform">→</span>
                 </span>
@@ -82,11 +82,11 @@ export default function V4Page() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="py-20 bg-gradient-to-br from-gray-50 to-white"
+          className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white"
         >
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-black text-black mb-6">
+            <div className="text-center mb-10 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-black mb-6">
                 {dict.unlockedHeadlineBefore}{' '}
                 <span className="text-accent">{dict.unlockedHeadlineAccent}</span>{' '}
                 {dict.unlockedHeadlineAfter}
@@ -130,9 +130,9 @@ export default function V4Page() {
             <div className="text-center">
               <a
                 href={localized('/v4/success', locale)}
-                className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden inline-block"
+                className="group relative bg-accent text-black w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-2xl font-black text-base sm:text-lg md:text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden inline-flex items-center justify-center"
               >
-                <span className="relative z-10 flex items-center gap-3">
+                <span className="relative z-10 flex items-center justify-center gap-3">
                   {dict.unlockedCTA}
                   <span className="group-hover:translate-x-2 transition-transform">→</span>
                 </span>

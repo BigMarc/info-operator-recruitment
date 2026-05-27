@@ -28,26 +28,26 @@ export default function V4SuccessPage() {
         </div>
       </header>
 
-      <section className="py-20">
+      <section className="py-12 sm:py-16 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, ease: 'easeOut' }}>
-            <div className="inline-flex items-center gap-3 bg-accent/10 px-8 py-4 rounded-full border-2 border-accent/30 mb-8">
-              <span className="text-3xl">✅</span>
-              <span className="text-black font-black text-lg">{dict.badge}</span>
+            <div className="inline-flex items-center gap-3 bg-accent/10 px-5 py-3 sm:px-8 sm:py-4 rounded-full border-2 border-accent/30 mb-6 sm:mb-8">
+              <span className="text-2xl sm:text-3xl">✅</span>
+              <span className="text-black font-black text-base sm:text-lg">{dict.badge}</span>
             </div>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black text-black mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
               {dict.headlineBefore}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
                 {dict.headlineAccent}
               </span>{' '}
               {dict.headlineAfter}
             </h1>
-            <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">{dict.intro}</p>
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed">{dict.intro}</p>
           </motion.div>
         </div>
       </section>
 
-      <section className="py-12 bg-white">
+      <section className="py-10 sm:py-12 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
@@ -71,10 +71,10 @@ export default function V4SuccessPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
-            <h2 className="text-3xl md:text-5xl font-black text-black mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-black mb-6 leading-tight">
               {dict.ctaHeadlineLine1}
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
@@ -87,10 +87,10 @@ export default function V4SuccessPage() {
               <span className="text-black font-bold">{dict.ctaScarcity}</span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href={`${localized('/', locale)}#kalender`} className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 glow-animation">
-                <span className="relative z-10 flex items-center gap-3">{dict.ctaPrimary}<span className="group-hover:translate-x-2 transition-transform">→</span></span>
+              <a href={`${localized('/', locale)}#kalender`} className="group relative bg-accent text-black w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-2xl font-black text-base sm:text-lg md:text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 glow-animation inline-flex items-center justify-center">
+                <span className="relative z-10 flex items-center justify-center gap-3">{dict.ctaPrimary}<span className="group-hover:translate-x-2 transition-transform">→</span></span>
               </a>
-              <a href="mailto:info@tgn-media.com" className="px-8 py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-lg rounded-2xl transition-all">{dict.ctaSecondary}</a>
+              <a href="mailto:info@tgn-media.com" className="w-full sm:w-auto px-6 py-4 sm:px-8 sm:py-5 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-base sm:text-lg rounded-2xl transition-all text-center">{dict.ctaSecondary}</a>
             </div>
             <p className="mt-10 text-sm text-gray-500">{dict.ctaGuaranteeNote}</p>
           </motion.div>

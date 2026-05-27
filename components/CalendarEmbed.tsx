@@ -7,7 +7,7 @@ interface CalendarEmbedProps { dict: CalendarDict; }
 
 export default function CalendarEmbed({ dict }: CalendarEmbedProps) {
   return (
-    <section id="kalender" className="py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
+    <section id="kalender" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -16,7 +16,7 @@ export default function CalendarEmbed({ dict }: CalendarEmbedProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4">
             {dict.headlineLine1}
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">

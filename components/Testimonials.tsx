@@ -7,7 +7,7 @@ interface TestimonialsProps { dict: TestimonialsDict; }
 
 export default function Testimonials({ dict }: TestimonialsProps) {
   return (
-    <section id="stories" className="py-20 bg-white">
+    <section id="stories" className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,7 +19,7 @@ export default function Testimonials({ dict }: TestimonialsProps) {
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
             {dict.tag}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6">
             {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
               {dict.headlineAccent}
@@ -68,7 +68,7 @@ export default function Testimonials({ dict }: TestimonialsProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="bg-gradient-to-r from-accent/10 to-accent/5 rounded-2xl p-8 border-2 border-accent/20"
+          className="bg-gradient-to-r from-accent/10 to-accent/5 rounded-2xl p-6 md:p-8 border-2 border-accent/20"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {dict.aggregate.map((s) => (

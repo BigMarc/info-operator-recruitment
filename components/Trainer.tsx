@@ -13,7 +13,7 @@ interface TrainerProps {
 
 export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-4">
             {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
               {dict.headlineAccent}
@@ -39,8 +39,8 @@ export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
           className="bg-gray-50 rounded-2xl overflow-hidden shadow-2xl border-2 border-accent/10 mb-8"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="p-8 md:p-12">
-              <h3 className="text-4xl font-black text-accent mb-6">{dict.name}</h3>
+            <div className="p-6 md:p-12">
+              <h3 className="text-3xl sm:text-4xl font-black text-accent mb-6">{dict.name}</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-8">
                 <FormattedText text={dict.intro} strongClassName="text-black font-bold" />
               </p>
@@ -58,14 +58,14 @@ export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
                 ))}
               </div>
             </div>
-            <div className="relative bg-black min-h-[400px] lg:min-h-full">
+            <div className="relative bg-black min-h-[300px] sm:min-h-[400px] lg:min-h-full">
               <img
                 src="/marc-schultheiss.jpg"
                 alt={dict.name}
                 className="w-full h-full object-cover grayscale"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8">
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
                 <p className="text-white text-lg italic leading-relaxed mb-3 border-l-4 border-accent pl-4">
                   &ldquo;{dict.quote}&rdquo;
                 </p>
@@ -80,7 +80,7 @@ export default function Trainer({ dict, modalDict, locale }: TrainerProps) {
             locale={locale}
             dict={modalDict}
             source="trainer"
-            className="inline-flex items-center gap-3 bg-accent text-black px-10 py-5 rounded-2xl font-black text-lg shadow-lg hover:shadow-xl hover:bg-accent-dark transition-all transform hover:scale-105"
+            className="inline-flex items-center justify-center gap-3 bg-accent text-black w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 rounded-2xl font-black text-base sm:text-lg shadow-lg hover:shadow-xl hover:bg-accent-dark transition-all transform hover:scale-105"
           >
             {dict.cta}
             <span>→</span>

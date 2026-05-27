@@ -8,7 +8,7 @@ interface MethodProps { dict: MethodDict; }
 
 export default function Method({ dict }: MethodProps) {
   return (
-    <section id="methode" className="relative py-20 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
+    <section id="methode" className="relative py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden">
       <div className="absolute top-20 right-10 w-96 h-96 bg-accent/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default function Method({ dict }: MethodProps) {
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
             {dict.tag}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6">
             {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
               {dict.headlineAccent}
@@ -39,7 +39,7 @@ export default function Method({ dict }: MethodProps) {
           className="bg-white rounded-2xl shadow-2xl border-2 border-accent/10 overflow-hidden mb-12"
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="p-6 md:p-12 flex flex-col justify-center">
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
                 <FormattedText text={dict.body1} strongClassName="text-black font-bold" />
               </p>
@@ -62,7 +62,7 @@ export default function Method({ dict }: MethodProps) {
                 </span>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-gray-100 to-gray-200 min-h-[300px] lg:min-h-full flex items-center justify-center p-8">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-200 min-h-[240px] sm:min-h-[280px] lg:min-h-full flex items-center justify-center p-6 md:p-8">
               <img
                 src="/marc-schultheiss.jpg"
                 alt="Marc Schultheiss"

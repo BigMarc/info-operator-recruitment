@@ -8,7 +8,7 @@ interface ReframeProps { dict: ReframeDict; }
 
 export default function Reframe({ dict }: ReframeProps) {
   return (
-    <section className="relative py-20 bg-black overflow-hidden">
+    <section className="relative py-12 sm:py-16 md:py-20 bg-black overflow-hidden">
       <div className="absolute top-10 left-10 w-80 h-80 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -24,7 +24,7 @@ export default function Reframe({ dict }: ReframeProps) {
             <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
               {dict.tag}
             </span>
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-8 leading-tight">
               {dict.headlineLine1}
               <br />
               {dict.headlineLine2Pre}{' '}
@@ -49,7 +49,7 @@ export default function Reframe({ dict }: ReframeProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:sticky lg:top-24"
           >
-            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-accent/40 rounded-2xl p-8 shadow-2xl">
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-accent/40 rounded-2xl p-6 md:p-8 shadow-2xl">
               <div className="mb-6">
                 <div className="flex items-start gap-3 mb-3">
                   <span className="text-2xl">❌</span>

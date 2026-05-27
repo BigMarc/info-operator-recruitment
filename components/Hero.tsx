@@ -19,7 +19,7 @@ export default function Hero({ dict, modalDict, locale }: HeroProps) {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-accent/3 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function Hero({ dict, modalDict, locale }: HeroProps) {
             {dict.tag}
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight tracking-tight">
             {dict.headlineLine1}
             <br />
             {dict.headlineLine2Pre}{' '}
@@ -46,9 +46,9 @@ export default function Hero({ dict, modalDict, locale }: HeroProps) {
               {dict.sub}
             </p>
 
-            <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-4 rounded-full border-2 border-accent/20 mb-2">
-              <span className="text-accent font-bold text-lg">💰</span>
-              <span className="text-black font-bold text-base sm:text-lg">
+            <div className="inline-flex items-start gap-2 bg-accent/10 px-4 py-3 sm:px-6 sm:py-4 rounded-2xl sm:rounded-full border-2 border-accent/20 mb-2 text-left sm:text-center">
+              <span className="text-accent font-bold text-lg flex-shrink-0">💰</span>
+              <span className="text-black font-bold text-sm sm:text-base md:text-lg">
                 {dict.guaranteeBarBefore}
                 <span className="text-accent font-black">{dict.guaranteeAmount}</span>
                 {dict.guaranteeBarMiddle}
@@ -89,16 +89,16 @@ export default function Hero({ dict, modalDict, locale }: HeroProps) {
               locale={locale}
               dict={modalDict}
               source="hero"
-              className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden glow-animation"
+              className="group relative bg-accent text-black w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 rounded-2xl font-black text-base sm:text-lg md:text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden glow-animation"
             >
-              <span className="relative z-10 flex items-center gap-3">
+              <span className="relative z-10 flex items-center justify-center gap-3">
                 {dict.ctaPrimary}
                 <span className="group-hover:translate-x-2 transition-transform">→</span>
               </span>
             </TrainingCTA>
             <a
               href="#methode"
-              className="group px-8 py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-lg rounded-2xl transition-all transform hover:scale-105 flex items-center gap-2"
+              className="group w-full sm:w-auto px-6 py-4 sm:px-8 sm:py-5 md:px-8 md:py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-base sm:text-lg rounded-2xl transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               {dict.ctaSecondary}
               <span className="group-hover:translate-y-1 transition-transform">↓</span>

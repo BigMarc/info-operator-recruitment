@@ -15,7 +15,7 @@ const OFFSETS = ['lg:translate-y-12', 'lg:translate-y-6', 'lg:translate-y-0'];
 
 export default function ValueLadder({ dict, modalDict, locale }: ValueLadderProps) {
   return (
-    <section className="py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
+    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-accent/5 via-white to-accent/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function ValueLadder({ dict, modalDict, locale }: ValueLadderProp
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
             {dict.tag}
           </span>
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">{dict.headlineAccent}</span>
             <br />
             {dict.headlineRest}
@@ -42,7 +42,7 @@ export default function ValueLadder({ dict, modalDict, locale }: ValueLadderProp
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15, duration: 0.8 }}
-              className={`${OFFSETS[i] ?? ''} bg-white rounded-2xl p-8 border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-all flex flex-col`}
+              className={`${OFFSETS[i] ?? ''} bg-white rounded-2xl p-6 md:p-8 border-2 border-accent/20 shadow-xl hover:shadow-2xl transition-all flex flex-col`}
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 rounded-full bg-accent text-black font-black text-2xl flex items-center justify-center shadow-lg">
@@ -81,7 +81,7 @@ export default function ValueLadder({ dict, modalDict, locale }: ValueLadderProp
             locale={locale}
             dict={modalDict}
             source="ladder-primary"
-            className="inline-flex items-center gap-3 bg-black text-white px-10 py-5 rounded-2xl font-black text-lg shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all transform hover:scale-105"
+            className="inline-flex items-center justify-center gap-3 bg-black text-white w-full sm:w-auto px-6 py-4 sm:px-10 sm:py-5 rounded-2xl font-black text-base sm:text-lg shadow-lg hover:shadow-xl hover:bg-gray-900 transition-all transform hover:scale-105"
           >
             {dict.ctaPrimary}
             <span>→</span>
