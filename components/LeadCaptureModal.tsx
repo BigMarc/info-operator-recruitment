@@ -107,7 +107,7 @@ export default function LeadCaptureModal({
       <AnimatePresence>
         {open && (
           <Dialog.Portal forceMount>
-            <Dialog.Overlay asChild>
+            <Dialog.Overlay asChild forceMount>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -116,13 +116,16 @@ export default function LeadCaptureModal({
                 className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
               />
             </Dialog.Overlay>
-            <Dialog.Content asChild>
+            <Dialog.Content
+              forceMount
+              className="fixed inset-0 z-50 flex items-center justify-center p-4 focus:outline-none pointer-events-none"
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.96 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.96 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-[480px] bg-white rounded-2xl shadow-2xl border-2 border-accent/20 p-8 focus:outline-none"
+                className="relative w-full max-w-[480px] bg-white rounded-2xl shadow-2xl border-2 border-accent/20 p-8 pointer-events-auto"
               >
                 <Dialog.Close
                   className="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center text-gray-700 transition focus:outline-none focus:ring-2 focus:ring-accent"
