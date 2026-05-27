@@ -23,9 +23,9 @@ export default function Home() {
       <Reframe dict={dict.reframe} />
       <Method dict={dict.method} />
       <Trainer dict={dict.trainer} locale={locale} />
-      <Testimonials />
-      <ValueLadder />
-      <GuaranteeScarcity />
+      <Testimonials dict={dict.testimonials} />
+      <ValueLadder dict={dict.ladder} locale={locale} />
+      <GuaranteeScarcity dict={dict.guarantee} />
       <FAQ />
       <CalendarEmbed />
       <Footer />
