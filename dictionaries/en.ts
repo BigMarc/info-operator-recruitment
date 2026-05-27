@@ -326,6 +326,24 @@ Despite careful content control, we accept no liability for the content of exter
 *Note: This text is a draft. Have it reviewed by a lawyer before publication.*`,
     },
   },
+  modal: {
+    headline: 'Get the free 60-minute training',
+    sub: 'Method, business model, real numbers. Right after sign-up.',
+    firstNameLabel: 'First name',
+    firstNamePlaceholder: 'Alex',
+    emailLabel: 'Email',
+    emailPlaceholder: 'alex@example.com',
+    consentLabelBefore: 'I agree that my data is used to provide the training and follow-up emails. I can withdraw at any time. Details: ',
+    consentLinkText: 'Privacy Policy',
+    consentLabelAfter: '.',
+    submit: 'Unlock training →',
+    submitting: 'Securing...',
+    errorRequired: 'Please fill in all fields.',
+    errorEmail: 'Please enter a valid email address.',
+    errorConsent: 'Please consent to data processing.',
+    errorSubmit: 'Something went wrong. Please try again.',
+    closeLabel: 'Close',
+  },
 };
 
 export default en;

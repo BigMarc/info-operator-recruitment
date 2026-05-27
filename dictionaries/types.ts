@@ -296,6 +296,25 @@ export interface LegalDict {
   };
 }
 
+export interface ModalDict {
+  headline: string;
+  sub: string;
+  firstNameLabel: string;
+  firstNamePlaceholder: string;
+  emailLabel: string;
+  emailPlaceholder: string;
+  consentLabelBefore: string;
+  consentLinkText: string;
+  consentLabelAfter: string;
+  submit: string;
+  submitting: string;
+  errorRequired: string;
+  errorEmail: string;
+  errorConsent: string;
+  errorSubmit: string;
+  closeLabel: string;
+}
+
 export interface Dictionary {
   meta: MetaDict;
   nav: NavDict;
@@ -313,4 +332,5 @@ export interface Dictionary {
   v4: V4Dict;
   success: SuccessDict;
   legal: LegalDict;
+  modal: ModalDict;
 }

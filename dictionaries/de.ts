@@ -326,6 +326,24 @@ Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für di
 *Hinweis: Dieser Text ist ein Entwurf. Vor Veröffentlichung von einem Rechtsanwalt prüfen lassen.*`,
     },
   },
+  modal: {
+    headline: 'Hol dir das kostenlose 60-Minuten-Training',
+    sub: 'Methode, Geschäftsmodell, echte Zahlen. Direkt nach Eintragung.',
+    firstNameLabel: 'Vorname',
+    firstNamePlaceholder: 'Max',
+    emailLabel: 'E-Mail',
+    emailPlaceholder: 'max@beispiel.de',
+    consentLabelBefore: 'Ich stimme zu, dass meine Daten zur Bereitstellung des Trainings und für Folge-E-Mails verwendet werden. Widerruf jederzeit möglich. Details: ',
+    consentLinkText: 'Datenschutzerklärung',
+    consentLabelAfter: '.',
+    submit: 'Training jetzt freischalten →',
+    submitting: 'Sichern...',
+    errorRequired: 'Bitte fülle alle Felder aus.',
+    errorEmail: 'Bitte gib eine gültige E-Mail-Adresse ein.',
+    errorConsent: 'Bitte stimme der Datenverarbeitung zu.',
+    errorSubmit: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+    closeLabel: 'Schließen',
+  },
 };
 
 export default de;
