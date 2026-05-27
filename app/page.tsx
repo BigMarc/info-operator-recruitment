@@ -1,3 +1,4 @@
+import { getDictionary } from '@/dictionaries';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import ProblemAgitation from '@/components/ProblemAgitation';
@@ -12,9 +13,11 @@ import CalendarEmbed from '@/components/CalendarEmbed';
 import Footer from '@/components/Footer';
 
 export default function Home() {
+  const dict = getDictionary('de');
+  const locale = 'de' as const;
   return (
     <main className="min-h-screen">
-      <Header />
+      <Header dict={dict.nav} locale={locale} />
       <Hero />
       <ProblemAgitation />
       <Reframe />
