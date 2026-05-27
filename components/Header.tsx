@@ -10,7 +10,6 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -22,37 +21,36 @@ export default function Header() {
             </a>
           </motion.div>
 
-          {/* Desktop Navigation */}
           <motion.nav
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             className="hidden md:flex items-center space-x-8"
           >
-            <a href="#about" className="text-gray-700 hover:text-black font-semibold transition">
-              About Training
+            <a href="#methode" className="text-gray-700 hover:text-black font-semibold transition">
+              Methode
             </a>
-            <a href="#testimonials" className="text-gray-700 hover:text-black font-semibold transition">
-              Operator Stories
+            <a href="#stories" className="text-gray-700 hover:text-black font-semibold transition">
+              Operator-Stories
             </a>
-            <a href="/v4" className="text-gray-700 hover:text-black font-semibold transition">
-              Free Training
+            <a href="#faq" className="text-gray-700 hover:text-black font-semibold transition">
+              FAQ
             </a>
             <a
               href="/v4"
               className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg hover:shadow-xl"
             >
-              Free Training
+              Kostenloses Training
             </a>
           </motion.nav>
 
-          {/* Mobile Menu Button */}
           <motion.button
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Menü öffnen"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isMenuOpen ? (
@@ -64,7 +62,6 @@ export default function Header() {
           </motion.button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
@@ -73,33 +70,21 @@ export default function Header() {
             className="md:hidden border-t border-gray-200 py-4"
           >
             <div className="flex flex-col space-y-4">
-              <a 
-                href="#about" 
-                className="text-gray-700 hover:text-black font-semibold transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                About Training
+              <a href="#methode" className="text-gray-700 hover:text-black font-semibold transition" onClick={() => setIsMenuOpen(false)}>
+                Methode
               </a>
-              <a 
-                href="#testimonials" 
-                className="text-gray-700 hover:text-black font-semibold transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Operator Stories
+              <a href="#stories" className="text-gray-700 hover:text-black font-semibold transition" onClick={() => setIsMenuOpen(false)}>
+                Operator-Stories
               </a>
-              <a 
-                href="/v4" 
-                className="text-gray-700 hover:text-black font-semibold transition"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Free Training
+              <a href="#faq" className="text-gray-700 hover:text-black font-semibold transition" onClick={() => setIsMenuOpen(false)}>
+                FAQ
               </a>
               <a
                 href="/v4"
                 className="bg-accent text-black px-6 py-3 rounded-full font-bold hover:bg-accent-dark transition shadow-lg text-center"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Free Training
+                Kostenloses Training
               </a>
             </div>
           </motion.div>
