@@ -409,7 +409,7 @@ export default function AGBPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict.footer} locale="de" />
     </main>
   );
 }

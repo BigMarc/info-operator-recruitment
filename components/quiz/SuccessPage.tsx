@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import CalendarEmbed from '../CalendarEmbed';
+import { getDictionary } from '@/dictionaries';
 import { QuizVariant } from './types';
 
 interface SuccessPageProps {
@@ -9,6 +10,7 @@ interface SuccessPageProps {
 }
 
 export default function SuccessPage({ variant }: SuccessPageProps) {
+  const calendarDict = getDictionary('de').calendar;
   const getVariantGradient = () => {
     switch (variant) {
       case 'v1':
@@ -99,7 +101,7 @@ export default function SuccessPage({ variant }: SuccessPageProps) {
               </p>
             </div>
             
-            <CalendarEmbed />
+            <CalendarEmbed dict={calendarDict} />
           </motion.div>
 
           {/* Additional Info */}

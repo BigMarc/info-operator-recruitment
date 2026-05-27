@@ -2,43 +2,11 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { FAQDict } from '@/dictionaries/types';
 
-const QUESTIONS = [
-  {
-    q: 'Für wen ist die Growth Partner Ausbildung geeignet?',
-    a: 'Für Menschen mit beruflicher Vorerfahrung (Marketing, Vertrieb, Beratung, Freelancing, Engineering), die ein zweites Standbein oder eine vollständige Selbstständigkeit aufbauen wollen — ohne eigene Kundenakquise. Vorerfahrung in Marketing hilft, ist aber kein Muss. Das System ist so aufgebaut, dass du in 4–6 Wochen die Kernfähigkeiten lernst.',
-  },
-  {
-    q: 'Wie funktioniert das Creator-Matching genau?',
-    a: 'Nach Abschluss deiner Ausbildung stellen wir dir Content Creator aus unserem Netzwerk vor, die bereits eine Audience aufgebaut haben, aber noch kein Produkt-Backend besitzen. Du führst Erstgespräche, prüfst Passung in beide Richtungen, und arbeitest dann auf Revenue-Share-Basis (20–50 % je nach Setup).',
-  },
-  {
-    q: 'Wie viel Zeit muss ich pro Woche investieren?',
-    a: 'Während der 4–6-wöchigen Ausbildung rechne mit 8–12 Stunden pro Woche. Nach der Ausbildung skaliert der Aufwand mit deiner Kundenanzahl: 1 Creator-Kunde = etwa 10–15 Std/Woche; 3 Kunden = grob ein Vollzeitäquivalent.',
-  },
-  {
-    q: 'Brauche ich Vorerfahrung in Marketing oder Verkauf?',
-    a: 'Nein — aber strukturiertes Denken hilft. Die Methode bringt dir alle Schritte bei: Offer-Creation, Funnels, Automation, Launch-Mechanik, Closing. Über die Hälfte unserer aktiven Growth Partners hatte vorher keine Marketing-Rolle.',
-  },
-  {
-    q: 'Was kostet das Programm — und warum steht der Preis nicht hier?',
-    a: 'Den Preis besprechen wir im Strategie-Call, weil er von deinem Setup abhängt (z. B. Zahlweise, Coaching-Tier, ob du sofort startest oder eine spätere Kohorte). Die 5K-Garantie deckt dein Risiko vollständig: verdienst du in 90 Tagen nicht mindestens 5.000 € mit deinem ersten Kunden, erhältst du 100 % zurück.',
-  },
-  {
-    q: 'Wie schnell sind erste Einnahmen realistisch?',
-    a: 'Die durchschnittliche Zeit vom Programmstart bis zum ersten zahlenden Creator-Kunden liegt bei ca. 90 Tagen. Schnellere Partner schaffen es in 30–45 Tagen; langsamere brauchen 4–5 Monate. Das hängt von deiner Umsetzungsgeschwindigkeit ab.',
-  },
-  {
-    q: 'Ist das Modell wirklich ortsunabhängig?',
-    a: 'Ja. Die gesamte Arbeit läuft remote: Calls mit Creatoren per Zoom, Funnel-Aufbau in Web-Tools (z. B. ClickFunnels, ActiveCampaign), Launch-Koordination per Slack/Notion. Mehrere unserer Growth Partners arbeiten aus Bali, Lissabon und Mexico City.',
-  },
-  {
-    q: 'Was passiert, wenn ich nach 90 Tagen keinen Kunden habe?',
-    a: 'Greift die 5.000-€-in-90-Tagen-Garantie — du bekommst 100 % deiner Ausbildungsgebühr zurück. Bedingung: nachweisbare Umsetzung der im Programm vermittelten Schritte (Modul-Abschlüsse, Outreach-Logs). Wir haben den Anspruch, dass jeder Partner mindestens diesen Schwellwert erreicht; alle bisherigen Garantie-Fälle wurden ohne Diskussion ausgezahlt.',
-  },
-];
+interface FAQProps { dict: FAQDict; }
 
-export default function FAQ() {
+export default function FAQ({ dict }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
@@ -52,21 +20,19 @@ export default function FAQ() {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 mb-6 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
-            FAQ
+            {dict.tag}
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-black mb-6">
-            Häufige{' '}
+            {dict.headlineBefore}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent">
-              Fragen
+              {dict.headlineAccent}
             </span>
           </h2>
-          <p className="text-xl text-gray-700">
-            Alle wichtigen Fragen & Antworten auf einen Blick.
-          </p>
+          <p className="text-xl text-gray-700">{dict.sub}</p>
         </motion.div>
 
         <div className="space-y-4">
-          {QUESTIONS.map((item, i) => {
+          {dict.items.map((item, i) => {
             const isOpen = openIndex === i;
             return (
               <motion.div

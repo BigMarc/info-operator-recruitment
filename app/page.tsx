@@ -26,9 +26,9 @@ export default function Home() {
       <Testimonials dict={dict.testimonials} />
       <ValueLadder dict={dict.ladder} locale={locale} />
       <GuaranteeScarcity dict={dict.guarantee} />
-      <FAQ />
-      <CalendarEmbed />
-      <Footer />
+      <FAQ dict={dict.faq} />
+      <CalendarEmbed dict={dict.calendar} />
+      <Footer dict={dict.footer} locale={locale} />
     </main>
   );
 }

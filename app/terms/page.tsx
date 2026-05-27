@@ -117,7 +117,7 @@ export default function TermsPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict.footer} locale="de" />
     </main>
   );
 }

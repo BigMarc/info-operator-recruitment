@@ -87,7 +87,7 @@ export default function PrivacyPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict.footer} locale="de" />
     </main>
   );
 }

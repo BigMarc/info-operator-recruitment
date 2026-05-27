@@ -119,7 +119,7 @@ export default function DisclosurePage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer dict={dict.footer} locale="de" />
     </main>
   );
 }
