@@ -1,10 +1,12 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { getDictionary } from '@/dictionaries';
 
 export default function TermsPage() {
+  const dict = getDictionary('de');
   return (
     <main className="min-h-screen bg-white">
-      <Header />
+      <Header dict={dict.nav} locale="de" />
       <div className="pt-20 pb-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
