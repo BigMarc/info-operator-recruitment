@@ -7,7 +7,6 @@ export default function Footer() {
     <footer className="bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,58 +18,46 @@ export default function Footer() {
               Build<span className="text-accent">ForThem</span>
             </h3>
             <p className="text-gray-300 mb-6 max-w-md">
-              Training aspiring Growth Partners to help content creators launch successful info products. 
-              Comprehensive training, client matching, and ongoing support.
+              Wir bilden Growth Partners aus, die das Backend für etablierte Content Creator bauen.
+              Komplette Ausbildung, Creator-Matching und laufende Unterstützung.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition">
+              <a href="mailto:info@tgn-media.com" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition" aria-label="E-Mail">
                 <span className="text-white">📧</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition">
-                <span className="text-white">📱</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition">
-                <span className="text-white">🐦</span>
-              </a>
-              <a href="#" className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-accent transition">
-                <span className="text-white">📘</span>
               </a>
             </div>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.8 }}
           >
-            <h4 className="text-lg font-bold text-white mb-4">Quick Links</h4>
+            <h4 className="text-lg font-bold text-white mb-4">Links</h4>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-300 hover:text-accent transition">About Training</a></li>
-              <li><a href="#testimonials" className="text-gray-300 hover:text-accent transition">Operator Stories</a></li>
-              <li><a href="/v4" className="text-gray-300 hover:text-accent transition">Free Training</a></li>
-              <li><a href="#social-proof" className="text-gray-300 hover:text-accent transition">Success Stats</a></li>
+              <li><a href="#methode" className="text-gray-300 hover:text-accent transition">Methode</a></li>
+              <li><a href="#stories" className="text-gray-300 hover:text-accent transition">Operator-Stories</a></li>
+              <li><a href="#faq" className="text-gray-300 hover:text-accent transition">FAQ</a></li>
+              <li><a href="/v4" className="text-gray-300 hover:text-accent transition">Kostenloses Training</a></li>
             </ul>
           </motion.div>
 
-          {/* Legal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            <h4 className="text-lg font-bold text-white mb-4">Legal</h4>
+            <h4 className="text-lg font-bold text-white mb-4">Rechtliches</h4>
             <ul className="space-y-3">
-              <li><a href="/privacy" className="text-gray-300 hover:text-accent transition">Privacy Policy</a></li>
-              <li><a href="/terms" className="text-gray-300 hover:text-accent transition">Terms of Service</a></li>
-              <li><a href="/disclosure" className="text-gray-300 hover:text-accent transition">Disclosure</a></li>
+              <li><a href="/privacy" className="text-gray-300 hover:text-accent transition">Datenschutz</a></li>
+              <li><a href="/terms" className="text-gray-300 hover:text-accent transition">AGB</a></li>
+              <li><a href="/disclosure" className="text-gray-300 hover:text-accent transition">Impressum</a></li>
             </ul>
           </motion.div>
         </div>
 
-        {/* Company Info */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -93,16 +80,15 @@ export default function Footer() {
               </div>
             </div>
             <div>
-              <h4 className="text-lg font-bold text-white mb-4">Training Guarantee</h4>
+              <h4 className="text-lg font-bold text-white mb-4">5K-Garantie</h4>
               <p className="text-gray-300">
-                If you don't earn at least $5,000 from your first client within 90 days, 
-                we'll refund your training investment 100%. No questions asked.
+                Verdienst du in 90 Tagen nicht mindestens 5.000 € mit deinem ersten Creator-Kunden,
+                bekommst du 100 % deiner Ausbildungsgebühr zurück. Schriftlich. Ohne Wenn und Aber.
               </p>
             </div>
           </div>
         </motion.div>
 
-        {/* Copyright */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -111,8 +97,8 @@ export default function Footer() {
           className="border-t border-gray-800 mt-8 pt-8 text-center"
         >
           <p className="text-gray-400">
-            © 2024 TGN Media LLC. All rights reserved. | 
-            <span className="text-accent font-semibold"> Growth Partner Training Program</span>
+            © 2026 TGN Media LLC. Alle Rechte vorbehalten. |
+            <span className="text-accent font-semibold"> Growth Partner Ausbildung</span>
           </p>
         </motion.div>
       </div>
