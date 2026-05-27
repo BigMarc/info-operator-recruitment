@@ -2,14 +2,15 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Growth Partner - Turn Creator Audiences Into Revenue',
-  description: 'Become a Growth Partner and help creators launch info products. Comprehensive training, client matching, and ongoing support. Earn $5K-$20K+ per client.',
-  keywords: 'growth partner, creator monetization, info products, course creation, community building, creator partnerships',
+  title: 'Growth Partner Ausbildung — BuildForThem',
+  description: 'Werde Growth Partner und verdiene 5.000–20.000 € pro Creator-Kunde. Komplette Ausbildung, Creator-Matching, 5K-Garantie in 90 Tagen.',
+  keywords: 'growth partner, creator backend, info produkt, online business, revenue share, ortsunabhängig, ausbildung',
   authors: [{ name: 'Marc Schultheiss' }],
   openGraph: {
-    title: 'Growth Partner - Turn Creator Audiences Into Revenue',
-    description: 'Become a Growth Partner and help creators launch info products. Comprehensive training, client matching, and ongoing support.',
+    title: 'Growth Partner Ausbildung — BuildForThem',
+    description: 'Werde Growth Partner und verdiene 5.000–20.000 € pro Creator-Kunde. Komplette Ausbildung, Creator-Matching, 5K-Garantie in 90 Tagen.',
     type: 'website',
+    locale: 'de_DE',
   },
 };
 
@@ -19,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className="antialiased">{children}</body>
     </html>
   );
