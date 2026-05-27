@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header dict={dict.nav} locale={locale} />
-      <Hero />
+      <Hero dict={dict.hero} locale={locale} />
       <ProblemAgitation />
       <Reframe />
       <Method />

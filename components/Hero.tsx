@@ -1,15 +1,15 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import type { HeroDict, Locale } from '@/dictionaries/types';
+import { localized } from '@/utils/route';
 
-const STATS = [
-  { value: '50+', label: 'Aktive Growth Partners', sub: 'Im Netzwerk' },
-  { value: '1,2 Mio. €+', label: 'An Partners ausgezahlt', sub: 'Revenue-Share', highlight: true },
-  { value: '90 %', label: 'Vermittlungsquote', sub: 'Matching-Erfolg' },
-  { value: '8 Jahre', label: 'Bewährtes System', sub: 'Seit 2018' },
-];
+interface HeroProps {
+  dict: HeroDict;
+  locale: Locale;
+}
 
-export default function Hero() {
+export default function Hero({ dict, locale }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-white pt-16 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -26,30 +26,33 @@ export default function Hero() {
           className="text-center"
         >
           <span className="inline-block px-4 py-1.5 mb-8 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold uppercase tracking-wider">
-            Growth Partner Ausbildung
+            {dict.tag}
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight tracking-tight">
-            Gehalt ist die langsame Spur.
+            {dict.headlineLine1}
             <br />
-            Werde Growth Partner und verdiene{' '}
+            {dict.headlineLine2Pre}{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-dark to-accent inline-block">
-              5.000–20.000 €
+              {dict.headlineAccent}
             </span>
             <br />
-            pro Creator-Kunde.
+            {dict.headlineLine3}
           </h1>
 
           <div className="max-w-4xl mx-auto mb-10">
             <p className="text-lg sm:text-xl md:text-2xl text-black mb-6 font-bold leading-relaxed">
-              Wir bilden dich aus. Wir matchen dich mit geprüften Content Creators.
-              Du baust ihr Backend — und kassierst Revenue-Share auf jeden Launch.
+              {dict.sub}
             </p>
 
             <div className="inline-flex items-center gap-2 bg-accent/10 px-6 py-4 rounded-full border-2 border-accent/20 mb-2">
               <span className="text-accent font-bold text-lg">💰</span>
               <span className="text-black font-bold text-base sm:text-lg">
-                <span className="text-accent font-black">5.000 €</span> in <span className="text-accent font-black">90 Tagen</span> oder <span className="text-accent font-black">100 %</span> Geld zurück — schriftlich garantiert.
+                {dict.guaranteeBarBefore}
+                <span className="text-accent font-black">{dict.guaranteeAmount}</span>
+                {dict.guaranteeBarMiddle}
+                <span className="text-accent font-black">{dict.guaranteeDays}</span>
+                {dict.guaranteeBarAfter}
               </span>
             </div>
           </div>
@@ -68,8 +71,8 @@ export default function Hero() {
                       <path d="M8 5v14l11-7z"/>
                     </svg>
                   </div>
-                  <p className="text-black font-bold text-lg">60-Min Training ansehen</p>
-                  <p className="text-gray-600 text-sm">Methode, Geschäftsmodell, echte Zahlen</p>
+                  <p className="text-black font-bold text-lg">{dict.videoTitle}</p>
+                  <p className="text-gray-600 text-sm">{dict.videoSub}</p>
                 </div>
               </div>
             </div>
@@ -82,11 +85,11 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
             <a
-              href="/v4"
+              href={localized('/v4', locale)}
               className="group relative bg-accent text-black px-12 py-6 rounded-2xl font-black text-xl shadow-[0_20px_50px_rgba(255,178,0,0.3)] hover:shadow-[0_25px_60px_rgba(255,178,0,0.5)] transition-all transform hover:scale-105 overflow-hidden glow-animation"
             >
               <span className="relative z-10 flex items-center gap-3">
-                Kostenloses Training sichern
+                {dict.ctaPrimary}
                 <span className="group-hover:translate-x-2 transition-transform">→</span>
               </span>
             </a>
@@ -94,13 +97,13 @@ export default function Hero() {
               href="#methode"
               className="group px-8 py-6 border-2 border-black text-black hover:bg-black hover:text-white font-bold text-lg rounded-2xl transition-all transform hover:scale-105 flex items-center gap-2"
             >
-              Wie funktioniert das?
+              {dict.ctaSecondary}
               <span className="group-hover:translate-y-1 transition-transform">↓</span>
             </a>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {STATS.map((stat, i) => (
+            {dict.stats.map((stat, i) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
