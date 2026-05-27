@@ -3,22 +3,22 @@
 import { motion } from 'framer-motion';
 import AnswerButton from './AnswerButton';
 import ProgressBar from './ProgressBar';
-import { Question } from './types';
+import { Question, QuizVariant } from './types';
 
 interface QuestionCardProps {
   question: Question;
   currentStep: number;
   totalSteps: number;
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
   onAnswer: (answer: string) => void;
 }
 
-export default function QuestionCard({ 
-  question, 
-  currentStep, 
-  totalSteps, 
-  variant, 
-  onAnswer 
+export default function QuestionCard({
+  question,
+  currentStep,
+  totalSteps,
+  variant,
+  onAnswer
 }: QuestionCardProps) {
   const getVariantGradient = () => {
     switch (variant) {
@@ -28,6 +28,8 @@ export default function QuestionCard({
         return 'from-green-50 to-teal-50';
       case 'v3':
         return 'from-orange-50 to-red-50';
+      case 'canonical':
+        return 'from-white via-gray-50 to-accent/5';
       default:
         return 'from-blue-50 to-purple-50';
     }

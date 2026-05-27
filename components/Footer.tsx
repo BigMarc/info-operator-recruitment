@@ -52,7 +52,7 @@ export default function Footer() {
             <h4 className="text-lg font-bold text-white mb-4">Rechtliches</h4>
             <ul className="space-y-3">
               <li><a href="/privacy" className="text-gray-300 hover:text-accent transition">Datenschutz</a></li>
-              <li><a href="/terms" className="text-gray-300 hover:text-accent transition">AGB</a></li>
+              <li><a href="/agb" className="text-gray-300 hover:text-accent transition">AGB</a></li>
               <li><a href="/disclosure" className="text-gray-300 hover:text-accent transition">Impressum</a></li>
             </ul>
           </motion.div>

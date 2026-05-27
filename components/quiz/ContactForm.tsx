@@ -3,10 +3,10 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
-import { ContactData } from './types';
+import { ContactData, QuizVariant } from './types';
 
 interface ContactFormProps {
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
   nextPage: string;
 }
 
@@ -27,9 +27,18 @@ export default function ContactForm({ variant, nextPage }: ContactFormProps) {
         return 'from-green-50 to-teal-50';
       case 'v3':
         return 'from-orange-50 to-red-50';
+      case 'canonical':
+        return 'from-white via-gray-50 to-accent/5';
       default:
         return 'from-blue-50 to-purple-50';
     }
+  };
+
+  const getSubmitButtonClasses = () => {
+    if (variant === 'canonical') {
+      return 'w-full bg-accent text-black font-bold py-4 px-8 rounded-xl hover:bg-accent-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl';
+    }
+    return 'w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105';
   };
 
   const validateForm = (): boolean => {
@@ -157,11 +166,13 @@ export default function ContactForm({ variant, nextPage }: ContactFormProps) {
 
               <motion.button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-4 px-8 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className={getSubmitButtonClasses()}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Kostenloses Beratungsgespräch buchen
+                {variant === 'canonical'
+                  ? 'Kostenloses Strategie-Gespräch sichern'
+                  : 'Kostenloses Beratungsgespräch buchen'}
               </motion.button>
             </form>
           </motion.div>

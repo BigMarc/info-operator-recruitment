@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { QuizVariant } from './types';
 
 interface AnswerButtonProps {
   option: {
@@ -11,7 +12,7 @@ interface AnswerButtonProps {
     value: string;
   };
   onClick: () => void;
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
 }
 
 export default function AnswerButton({ option, onClick, variant }: AnswerButtonProps) {
@@ -23,6 +24,8 @@ export default function AnswerButton({ option, onClick, variant }: AnswerButtonP
         return 'hover:shadow-green-500/25 border-green-200';
       case 'v3':
         return 'hover:shadow-orange-500/25 border-orange-200';
+      case 'canonical':
+        return 'hover:shadow-accent/40 border-accent/30';
       default:
         return 'hover:shadow-blue-500/25 border-blue-200';
     }

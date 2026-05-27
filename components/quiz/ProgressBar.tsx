@@ -1,14 +1,16 @@
 'use client';
 
+import { QuizVariant } from './types';
+
 interface ProgressBarProps {
   currentStep: number;
   totalSteps: number;
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
 }
 
 export default function ProgressBar({ currentStep, totalSteps, variant }: ProgressBarProps) {
   const progress = (currentStep / totalSteps) * 100;
-  
+
   const getVariantColor = () => {
     switch (variant) {
       case 'v1':
@@ -17,6 +19,8 @@ export default function ProgressBar({ currentStep, totalSteps, variant }: Progre
         return 'from-green-500 to-teal-600';
       case 'v3':
         return 'from-orange-500 to-red-600';
+      case 'canonical':
+        return 'from-accent to-accent-dark';
       default:
         return 'from-blue-500 to-purple-600';
     }

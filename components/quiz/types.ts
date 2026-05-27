@@ -4,9 +4,11 @@ export interface QuizAnswer {
   timestamp: number;
 }
 
+export type QuizVariant = 'v1' | 'v2' | 'v3' | 'canonical';
+
 export interface QuizData {
   answers: QuizAnswer[];
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
   completedAt?: number;
 }
 

@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import CalendarEmbed from '../CalendarEmbed';
+import { QuizVariant } from './types';
 
 interface SuccessPageProps {
-  variant: 'v1' | 'v2' | 'v3';
+  variant: QuizVariant;
 }
 
 export default function SuccessPage({ variant }: SuccessPageProps) {
@@ -16,6 +17,8 @@ export default function SuccessPage({ variant }: SuccessPageProps) {
         return 'from-green-50 to-teal-50';
       case 'v3':
         return 'from-orange-50 to-red-50';
+      case 'canonical':
+        return 'from-white via-gray-50 to-accent/5';
       default:
         return 'from-blue-50 to-purple-50';
     }
@@ -37,6 +40,11 @@ export default function SuccessPage({ variant }: SuccessPageProps) {
         return {
           title: 'Ausgezeichnet! Du bist ein idealer Partner',
           subtitle: 'Deine Antworten zeigen, dass du perfekt für eine Partnerschaft mit Content Creators geeignet bist. Lass uns gemeinsam durchstarten!'
+        };
+      case 'canonical':
+        return {
+          title: 'Top — du bist ein Match.',
+          subtitle: 'Basierend auf deinen Antworten haben wir noch Slots frei. Sichere dir jetzt dein kostenloses 30-Minuten-Strategie-Gespräch.'
         };
       default:
         return {
