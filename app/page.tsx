@@ -1,10 +1,14 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import CalendarEmbed from '@/components/CalendarEmbed';
-import SocialProof from '@/components/SocialProof';
-import About from '@/components/About';
+import ProblemAgitation from '@/components/ProblemAgitation';
+import Reframe from '@/components/Reframe';
+import Method from '@/components/Method';
+import Trainer from '@/components/Trainer';
 import Testimonials from '@/components/Testimonials';
-import CTASection from '@/components/CTASection';
+import ValueLadder from '@/components/ValueLadder';
+import GuaranteeScarcity from '@/components/GuaranteeScarcity';
+import FAQ from '@/components/FAQ';
+import CalendarEmbed from '@/components/CalendarEmbed';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,11 +16,15 @@ export default function Home() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <CalendarEmbed />
-      <SocialProof />
-      <About />
+      <ProblemAgitation />
+      <Reframe />
+      <Method />
+      <Trainer />
       <Testimonials />
-      <CTASection />
+      <ValueLadder />
+      <GuaranteeScarcity />
+      <FAQ />
+      <CalendarEmbed />
       <Footer />
     </main>
   );
